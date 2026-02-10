@@ -18,3 +18,43 @@ The application exposes custom metrics which are scraped by Prometheus and visua
 
 ## 🏗️ Architecture
 
+Flask App (/metrics) → Prometheus → Grafana
+
+
+---
+
+## Tech Stack
+
+- Python (Flask)
+- Prometheus
+- Grafana
+- Docker & Docker Compose
+
+---
+
+## Metrics
+
+- **app_requests_total**  
+  Counter metric tracking total HTTP requests served by the application
+
+---
+
+## Project Structure
+
+.
+├── app/
+│ ├── app.py
+│ └── Dockerfile
+├── prometheus.yml
+├── docker-compose.yml
+└── README.md
+
+
+---
+
+## Run Locally
+
+```bash
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
+docker compose up --build
